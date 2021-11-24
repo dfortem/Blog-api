@@ -8,10 +8,12 @@ import path from "path";
 import { middlewareLogger } from "./middleware/logger";
 
 import HomeController from "./controllers/home.controller";
+import BlogController from "./controllers/blog.controller";
 
 const app = new App({
   port: Number.parseInt(process.env.PORT) || 3001,
   controllers: [
+    new BlogController(),
     new HomeController()
   ],
   middleWares: [

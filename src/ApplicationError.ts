@@ -40,8 +40,32 @@ export type IError = {
   message: string
 }
 
-export const MISSING_ID: IError = {
-  code: "MISSING_ID",
+export const COMMENT_NOT_FOUND: IError = {
+  code: "COMMENT_NOT_FOUND",
   statusCode: 400,
-  message: "The required id is missing. The action cannot proceed."
+  message: "The comment id was not found in the database. Please verify the validity of your id."
+}
+
+export const COMMENT_ALREADY_DELETED: IError = {
+  code: "COMMENT_ALREADY_DELETED",
+  statusCode: 403,
+  message: "The comment has already been deleted, thus no modification or any other action is allowed."
+}
+
+export const MISSING_COMMENT_ID: IError = {
+  code: "MISSING_COMMENT_ID",
+  statusCode: 400,
+  message: "The required comment id is missing. The action cannot proceed."
+}
+
+export const MISSING_POST_ID: IError = {
+  code: "MISSING_POST_ID",
+  statusCode: 400,
+  message: "The required post id is missing. The action cannot proceed."
+}
+
+export const MISSING_COMMENT_MESSAGE: IError = {
+  code: "MISSING_MESSAGE",
+  statusCode: 400,
+  message: "The comment message is required. The action cannot proceed."
 }
