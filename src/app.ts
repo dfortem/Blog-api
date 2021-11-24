@@ -1,6 +1,6 @@
-import express from 'express'
-import { Application } from 'express'
-import { logger } from './middleware/logger'
+import express from "express"
+import { Application } from "express"
+import { logger } from "./middleware/logger"
 
 class App {
   public app: Application
@@ -23,12 +23,12 @@ class App {
 
   private routes(controllers: { forEach: (arg0: (controller: any) => void) => void; }) {
     controllers.forEach(controller => {
-      this.app.use('/', controller.router);
+      this.app.use("/", controller.router);
     })
   }
 
   private assets() {
-    this.app.use(express.static('public'));
+    this.app.use(express.static("public"));
   }
 
   public listen() {

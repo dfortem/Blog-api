@@ -1,22 +1,22 @@
-import * as winston from 'winston';
-import { format } from 'winston';
-import expressWinston from 'express-winston';
+import * as winston from "winston";
+import { format } from "winston";
+import expressWinston from "express-winston";
 
 export const logger = winston.createLogger({
   transports: [
     new winston.transports.File({
-      level:            'info',
+      level:            "info",
       format:           format.combine(
         format.timestamp(),
         format.metadata(),
         format.json(),
       ),
-      filename:         'logs/all-logs.log',
+      filename:         "logs/all-logs.log",
       handleExceptions: true
     }),
     new winston.transports.File({
-      filename:         'logs/error.log',
-      level:            'error',
+      filename:         "logs/error.log",
+      level:            "error",
       format:           format.combine(
         format.timestamp(),
         format.metadata(),
@@ -28,9 +28,9 @@ export const logger = winston.createLogger({
   exitOnError: false
 });
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   logger.add(new winston.transports.Console({
-    level: 'info',
+    level: "info",
     format: winston.format.combine(
       format.colorize(),
       format.simple()
