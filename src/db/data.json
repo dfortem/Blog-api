@@ -63,7 +63,7 @@
       "id": 2,
       "postID": 1,
       "name": "Marie",
-      "message": "I'm glad I've found your blog! Can0t wait for what's coming!",
+      "message": "I'm glad I've found your blog! Can't wait for what's coming!",
       "deleted": false,
       "created":"2021-11-11T21:37:40.431Z",
       "updated": "2021-11-11T21:37:40.431Z"
@@ -88,7 +88,6 @@
     {
       "id": 5,
       "postID": 1,
-      "name": "Alexis",
       "message": "Huge Fan! Great Work!",
       "deleted": true,
       "created":"2021-11-18T20:55:40.431Z",

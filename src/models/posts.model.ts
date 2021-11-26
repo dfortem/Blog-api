@@ -10,11 +10,6 @@ export type Post = {
   updated?: string
 }
 
-export type PostData = {
-  title: string,
-  content: string,
-}
-
 import data from "../db/data.json";
 
 export class PostsModel {
