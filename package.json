@@ -2,6 +2,10 @@
   "name": "Blog",
   "version": "1.0.0",
   "description": "Blog API",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dfortem/Blog-api.git"
+  },
   "main": "dist/server.js",
   "engines": {
     "node": "12.20.1"
